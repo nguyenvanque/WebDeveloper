@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>APPDEV.vn</title>
+    <!-- <link rel="stylesheet" href="css/login.css"> -->
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css'>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css'>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <input type="checkbox" id="check">
+            <label for="check">
+                <i class="fas fa-bars" id="btn"></i>
+                <i class="fas fa-times" id="cancel"></i>
+            </label>
+            <img src="images/logomenu.png">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="feature.html">Feature</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <a href="index.html"><button class="glow-on-hover"> LOGIN</button></a>
+            </ul>
+        </nav>
+
+    </header>
+
+    <section id="page_login">
+        <!-- <div class="container_form">
+        <div class="header">
+            <h2 style="text-align: center; color: RED; font-size: 30px;">Login</h2>
+        </div>
+        <form id="form_login" class="form_login">
+            <div class="form-control">
+                <label for="username">Username</label>
+                <input type="text" placeholder="Username" id="username"  pattern="[a-zA-Z]+" title="Tên không được nhập số"/>
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error message</small>
+            </div>
+            <div class="form-control">
+                <label for="username">Password</label>
+                <input type="password" placeholder="Password" id="password" />
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error message</small>
+            </div>
+            <button class="button">LOGIN</button>
+        </form>
+    </div> -->
+
+        <div class="align">
+            <div class="title_form">
+                <h4 class="h4one"> LOGIN </h4>
+                <h4 class="h4two"> AND </h4>
+                <h4 class="h4three"> REGISTER</h4>
+            </div>
+            <div class="card">
+                <div class="head">
+                    <div></div>
+                    <a id="login" class="selected" href="#login">Login</a>
+                    <a id="register" href="#register">Register</a>
+                    <div></div>
+                </div>
+                <div class="tabs">
+                    <form class="form_login" id="form_login">
+                        <div class="inputs">
+                            <div class="input">
+                                <input placeholder="Username" type="text" id="username">
+                                <img src="images/user.svg">
+                                <i class="fas fa-check-circle"></i>
+                                <i class="fas fa-exclamation-circle"></i>
+                                <small>Error message</small>
+
+                            </div>
+                            <div class="input">
+                                <input placeholder="Password" type="password" id="password">
+                                <img src="images/pass.svg">
+                                <i class="fas fa-check-circle"></i>
+                                <i class="fas fa-exclamation-circle"></i>
+                                <small>Error message</small>
+                            </div>
+                            <label class="checkbox">
+                                <input type="checkbox" value="luutrangthai" id="checkBox">
+                                <span>Remember me</span>
+                            </label>
+                        </div>
+
+                        <button class="button" onclick="DangNhap();">Login</button>
+                        <!-- <div class="login_fb_google">
+                            <button class=" buttonfacebook"> <i class="fa fa-facebook" aria-hidden="true"></i>
+                            </button>
+
+                            <button class=" buttonfacebook"><i class="fa fa-google" aria-hidden="true"></i></i>
+                            </button>
+                        </div> -->
+
+
+                    </form>
+                    <form class="form_login">
+                        <div class="inputs">
+
+                            <div class="input">
+                                <input placeholder="Username" type="text" id="usernameDK">
+                                <img src="images/user.svg">
+                                <i class="fas fa-check-circle"></i>
+                                <i class="fas fa-exclamation-circle"></i>
+                                <small>Error message</small>
+                            </div>
+                            <div class="input">
+                                <input placeholder="Password" type="password" id="passwordDK">
+                                <img src="images/pass.svg">
+                                <i class="fas fa-check-circle"></i>
+                                <i class="fas fa-exclamation-circle"></i>
+                                <small>Error message</small>
+                            </div>
+                            <div class="input">
+                                <input placeholder="Password" type="password" id="passwordDKCF">
+                                <img src="images/pass.svg">
+                                <i class="fas fa-check-circle"></i>
+                                <i class="fas fa-exclamation-circle"></i>
+                                <small>Error message</small>
+                            </div>
+                        </div>
+
+                        <button class="button " id="btndk" onclick="DangKy();">Register</button>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+        <button class="floating-btn" onclick="signin()">
+            Login facebook <i class="fa fa-facebook" aria-hidden="true"></i>
+        </button>
+    </section>
+    <footer class="footer-distributed " id="footerlogin">
+
+        <div class="footer-left">
+
+            <h3>APP<span>Developer</span></h3>
+
+            <p class="footer-company-name">Appdev &copy; 2020</p>
+        </div>
+
+        <div class="footer-center">
+
+            <div>
+                <i class="fa fa-map-marker"></i>
+                <p><span>21 Locgiang Street</span> HoaiAn, BinhDinh</p>
+            </div>
+
+            <div>
+                <i class="fa fa-phone"></i>
+                <p>0398413489</p>
+            </div>
+
+            <div>
+                <i class="fa fa-envelope"></i>
+                <p><a href="">nguyenvanque025@gmail.com</a></p>
+            </div>
+
+        </div>
+       
+
+        <body>
+           
+            </div>
+            <div class="footer-right">
+
+                <span class="footer-company-about">
+                    <span>About the company</span>
+                    App Dev Trick is a blog for web designers, graphic designers, web developers &amp; SEO Learner.
+                </span>
+
+                <div class="footer-icons">
+
+                    <a href="#"><i class="fa fa-facebook"></i></a>
+                    <a href="#"><i class="fa fa-twitter"></i></a>
+                    <a href="#"><i class="fa fa-linkedin"></i></a>
+                    <a href="#"><i class="fa fa-github"></i></a>
+
+                </div>
+
+            </div>
+
+    </footer>
+<!-- <button onclick="signin()" class="sign-in">
+    Sign width facebook
+</button>
+<div id="profile-pic">
+
+</div>
+<div id="user-email" class="user-email"></div>
+<div id="display-name"> -->
+
+</body>
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-auth.js"></script>
+
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-analytics.js"></script>
+
+<script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+        apiKey: "AIzaSyB-ewu8hMuWXNaSf6F5kywadQ3PLkzmCas",
+        authDomain: "loginasm-c272f.firebaseapp.com",
+        databaseURL: "https://loginasm-c272f.firebaseio.com",
+        projectId: "loginasm-c272f",
+        storageBucket: "loginasm-c272f.appspot.com",
+        messagingSenderId: "955285135127",
+        appId: "1:955285135127:web:5c80cd3ab95a9d7b936152",
+        measurementId: "G-BWVM8B1JH2"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+    function signin() {
+
+        var provider = new firebase.auth.FacebookAuthProvider();
+        provider.addScope('user_birthday');
+        firebase.auth().useDeviceLanguage();
+        firebase.auth().signInWithPopup(provider).then(function (result) {
+            // This gives you a Facebook Access Token. You can use it to access the Facebook API.
+            var token = result.credential.accessToken;
+            // The signed-in user info.
+            var user = result.user;
+            // ...
+            var location = 'index.html';
+            this.location = location;
+        }).catch(function (error) {
+            // Handle Errors here.
+            var errorCode = error.code;
+            var errorMessage = error.message;
+            // The email of the user's account used.
+            var email = error.email;
+            // The firebase.auth.AuthCredential type that was used.
+            var credential = error.credential;
+            // ...
+        });
+
+
+    }
+</script>
+
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/login.js"></script>
+
+
+</html>
